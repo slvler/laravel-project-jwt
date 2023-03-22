@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "5abdd56c-6467-4d9a-a0c0-bc0169ab1834",
+		"name": "Artifica Teknoloji",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14695094"
+	},
+	"item": [
+		{
+			"name": "account getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/account",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "account store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"deneme\",\r\n    \"email\" : \"email@gmail.com\",\r\n    \"phone\": \"0 5555 555 55 55\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/account/store",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"account",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api_key",
+						"value": "r0OjFEWtW5",
+						"type": "text"
+					},
+					{
+						"key": "hash",
+						"value": "ff754bc9c338ff55c46983619a758663e9c5ea9dbdf2ad4dd2f4a03a59a5cf13",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"title\",\r\n    \"description\": \"description\",\r\n    \"price\": \"100\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/product/store",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"product",
+						"store"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
