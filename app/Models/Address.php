@@ -16,5 +16,6 @@ class Address extends Model
         'user_id',
         'head',
         'detail',
+        'slug'
     ];
 }
