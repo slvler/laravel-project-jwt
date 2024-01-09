@@ -6,9 +6,9 @@
 ```
 
 ```bash
-    - php artisan key:generate
-    - php artisan migrate:fresh --seed
-    - php artisan jwt:secret
+     php artisan key:generate
+     php artisan migrate:fresh --seed
+     php artisan jwt:secret
 ```
 
 
