@@ -29,9 +29,17 @@ class AddressController extends Controller
         return new AddressResource(Address::findOrFail($id));
     }
 
-    public function update($id, Request $request)
+    public function update(Address $address, Request $request)
     {
-        $update = Address::where(['id' =>  $id, 'user_id' => auth()->id()])->update($request->all());
+        if ($request->user()->cannot('update', $address)) {
+            abort(403);
+        }
+
+        $address->head = $request->head;
+        $address->detail = $request->detail;
+
+        $update = $address->save();
+
         return response()->json($update);
     }
     public function delete($id)

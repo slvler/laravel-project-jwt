@@ -37,7 +37,7 @@ Route::get('/address',[\App\Http\Controllers\AddressController::class, 'index'])
 Route::get('/address/list',[\App\Http\Controllers\AddressController::class, 'list'])->middleware('jwt.auth');
 Route::post('/address/store',[\App\Http\Controllers\AddressController::class, 'store'])->middleware('jwt.auth');
 Route::get('/address/show/{id}',[\App\Http\Controllers\AddressController::class, 'show'])->middleware('jwt.auth');
-Route::put('/address/update/{id}',[\App\Http\Controllers\AddressController::class, 'update'])->middleware('jwt.auth');
+Route::put('/address/update/{address}',[\App\Http\Controllers\AddressController::class, 'update'])->middleware('jwt.auth');
 Route::delete('/address/delete/{id}',[\App\Http\Controllers\AddressController::class, 'delete'])->middleware('jwt.auth');
 
 
