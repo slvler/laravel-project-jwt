@@ -35,7 +35,6 @@ class EventServiceProvider extends ServiceProvider
     public function boot()
     {
         Address::observe(AddressObserver::class);
-
     }
 
     /**
