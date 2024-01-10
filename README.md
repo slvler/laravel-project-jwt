@@ -13,7 +13,6 @@
 
 
  ## Contents
-
  - laravel
  - mysql
  - jwt
