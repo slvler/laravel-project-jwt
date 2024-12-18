@@ -1,23 +1,23 @@
 ## Installation
-
 ```bash
-    cp .env.exmaple .env
-    composer install
+docker compose up -d --build 
+docker compose exec app bash
+chmod -R 777 /var/www/html/storage/ /var/www/html/bootstrap/
+cp .env.example .env
+composer install
+docker compose exec app php artisan key:generate
+docker compose exec app php artisan jwt:secret
+docker compose exec app php artisan migrate:fresh --seed
 ```
-
-```bash
-     php artisan key:generate
-     php artisan migrate:fresh --seed
-     php artisan jwt:secret
+## Contents
+```text
+laravel
+mysql
+jwt
+Docker
+Composer
+Nginx
 ```
-
-
- ## Contents
- - laravel
- - mysql
- - jwt
-
-
 ## mysql connection
 - user: root
 - password: 
